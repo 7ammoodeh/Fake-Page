@@ -1,0 +1,15 @@
+body { 
+    width: 100% !important;
+    height: 100% !important;
+    background-image: url(../img/pexels-florencio-rojas-5688836.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.card{
+    background: rgba(255, 255, 255,0.3) !important;
+}
+input, .btn{
+    opacity: 0.6;
+}

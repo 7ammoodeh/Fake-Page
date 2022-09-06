@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "d451b62a-0c33-481e-92f8-9d44010863f7": {
+      "ProjectGuid": "d451b62a-0c33-481e-92f8-9d44010863f7",
+      "DisplayName": "FaceBook",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
